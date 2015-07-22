@@ -12,8 +12,8 @@ if __name__ == "__main__":
     process = sys.argv[1];
     '''
     while True:
-        process = "getfeature";
-        process2 = "hadoop";
+        process = "*";
+        process2 = "*";
         cmd = "ps -ef | egrep \"(%s|%s)\" | awk -F \" \" '{print $2,$5}'" % (process,process2);
         Res = os.popen( cmd ).readlines();
         min = "%d" % int(time.strftime( "%M", time.localtime( time.time() ) ));
